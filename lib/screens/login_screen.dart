@@ -21,9 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _passwordController = TextEditingController();
 
   Future<void> _login() async {
-    final url = Uri.parse('https://groweasy.azurewebsites.net/api/v1/auth/log-in');
+    final url = Uri.parse('https://https://bioface-backend.onrender.com/api/v1/auth/login');
     final loginRequest = LoginRequest(
-      username: _usernameController.text,
+      email: _usernameController.text,
       password: _passwordController.text,
     );
 
@@ -63,6 +63,16 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     } catch (error) {
       _showError('Error: No se pudo conectar al servidor');
+    } finally {
+      // QUITAR DESPUES DE INTEGRAR CON EL BACKEND
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (BuildContext context) {
+            return const MainScreen();
+          },
+        ),
+      );
     }
   }
 
@@ -75,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.amberAccent,
       body: Padding(
         padding: const EdgeInsets.all(40),
         child: Center(
@@ -100,8 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: _usernameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Nombre de usuario',
-                    hintText: 'Ingrese su nombre de usuario',
+                    labelText: 'Email',
+                    hintText: 'Ingrese su email',
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -128,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextSpan(
                         text: 'Regístrate aquí!',
                         style: const TextStyle(
-                          color: Colors.blue,
+                          color: Colors.purple,
                           decoration: TextDecoration.underline,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -155,6 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textStyle: const TextStyle(
                       fontSize: 18,
                     ),
+                    backgroundColor: Colors.purple
                   ),
                   child: const Text('Iniciar Sesión'),
                 ),

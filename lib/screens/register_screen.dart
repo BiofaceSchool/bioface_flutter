@@ -75,7 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.amberAccent,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 8),
         child: Center(
@@ -118,8 +118,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   controller: _usernameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Nombre de usuario',
-                    hintText: 'Ingrese su nombre de usuario',
+                    labelText: 'Email',
+                    hintText: 'Ingrese su email',
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -181,6 +181,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: <Widget>[
                     FilledButton(
                       onPressed: _signup,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.purple, // Cambia el color del botón aquí
+                      ),
                       child: const Text('Registrarse'),
                     ),
                     OutlinedButton(
