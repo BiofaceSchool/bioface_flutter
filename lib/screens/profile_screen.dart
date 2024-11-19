@@ -9,7 +9,7 @@ class ProfileScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFFFE066),
       appBar: AppBar(
         title: const Text(
-          'Profile',
+          'PROFILE',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -32,15 +32,15 @@ class ProfileScreen extends StatelessWidget {
                 color: Color(0xFF800080),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 40),
             const Text(
-              'Full Name: Armando Mendoza\n'
-                  'Email: u203452658@upc.edu.pe\n'
-                  'Institution: University of Science\n'
+              'Full Name: Armando Mendoza\n\n'
+                  'Email: u203452658@upc.edu.pe\n\n'
+                  'Institution: University of Science\n\n'
                   'Program: Software',
               style: TextStyle(fontSize: 14, color: Colors.black),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             const Text(
               'FACIAL RECOGNITION STATUS',
               style: TextStyle(
@@ -49,14 +49,20 @@ class ProfileScreen extends StatelessWidget {
                 color: Color(0xFF800080),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             Row(
               children: [
+                const Icon(
+                  Icons.person,
+                  size: 50,
+                  color: Colors.white,
+                ),
+                const SizedBox(width: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Status: Approved',
+                      'Status: Approved\n',
                       style: TextStyle(fontSize: 14, color: Colors.black),
                     ),
                     Text(
@@ -73,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             Center(
               child: ElevatedButton(
                 onPressed: () {

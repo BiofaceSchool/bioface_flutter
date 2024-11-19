@@ -9,11 +9,11 @@ class HistoryScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFFFE066),
       appBar: AppBar(
         title: const Text(
-          'History',
+          'HISTORY',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF7E227B), // Color morado
+            color: Color(0xFF7E227B),
           ),
         ),
         backgroundColor: const Color(0xFFFFE066),

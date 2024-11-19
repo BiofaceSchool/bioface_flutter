@@ -194,7 +194,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: const Text(
                         'Cancelar',
                         style: TextStyle(
-                          color: Color(0xFF7E227B),
+                          color: Colors.black,
                         ),
                       ),
                     ),

@@ -4,7 +4,7 @@ class HelpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFD34E), // Color amarillo de fondo
+      backgroundColor: Color(0xFFFFE066),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
