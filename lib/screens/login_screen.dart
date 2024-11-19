@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: const Color(0xFFFFE066),
       body: Padding(
         padding: const EdgeInsets.all(40),
         child: Center(
@@ -138,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextSpan(
                         text: 'Regístrate aquí!',
                         style: const TextStyle(
-                          color: Colors.purple,
+                          color: Color(0xFF7E227B),
                           decoration: TextDecoration.underline,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     textStyle: const TextStyle(
                       fontSize: 18,
                     ),
-                    backgroundColor: Colors.purple
+                    backgroundColor: const Color(0xFF7E227B)
                   ),
                   child: const Text('Iniciar Sesión'),
                 ),

@@ -1,4 +1,9 @@
+import 'package:bioface_flutter/screens/home_screen.dart';
+import 'package:bioface_flutter/screens/profile_screen.dart';
+import 'package:bioface_flutter/screens/history_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'help_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -10,11 +15,12 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
-  // Lista de las pantallas a las que navega el BottomNavigationBar
+  // Lista de pantallas para cada pestaña del BottomNavigationBar
   final List<Widget> _pages = [
-    // const HomeScreen(),
-    // NotificationsScreen(),
-    // ProfileScreen(),
+    const HomeScreen(),
+    const ProfileScreen(),
+    const HistoryScreen(),
+    HelpScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -30,18 +36,25 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.black,
+        backgroundColor: Colors.amberAccent,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Inicio',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notificaciones',
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
-            label: 'Perfil',
+            icon: Icon(Icons.history),
+            label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.help),
+            label: 'Help',
           ),
         ],
       ),

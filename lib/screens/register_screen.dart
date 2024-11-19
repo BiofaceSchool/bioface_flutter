@@ -75,7 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: const Color(0xFFFFE066),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 8),
         child: Center(
@@ -161,7 +161,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.primary,
+                          color: Color(0xFF7E227B),
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
@@ -182,15 +182,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     FilledButton(
                       onPressed: _signup,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.purple, // Cambia el color del botón aquí
+                        backgroundColor: const Color(0xFF7E227B),
                       ),
                       child: const Text('Registrarse'),
                     ),
+                    SizedBox(width: 16),
                     OutlinedButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Cancelar'),
+                      child: const Text(
+                        'Cancelar',
+                        style: TextStyle(
+                          color: Color(0xFF7E227B),
+                        ),
+                      ),
                     ),
                   ],
                 ),
